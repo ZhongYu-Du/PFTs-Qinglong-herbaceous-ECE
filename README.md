@@ -2,7 +2,7 @@
 ### Plant functional traits determine metals accumulation among dominant herbaceous species in an antimony mining of Karst Zone, China
 ### Zhongyu Du
 
-#####R code#######
+### R code
 ```
 #----Plant functional traits manuscript---#
 
