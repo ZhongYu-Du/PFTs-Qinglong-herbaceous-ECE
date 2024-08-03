@@ -2,6 +2,8 @@
 ### Plant traits regulated metal(loid)s in dominant herbs in an antimony mining area of the Karst Zone, China
 ### Zhongyu Du
 
+### Abstract
+Understanding how plant functional traits respond to mining activities and impact metal(loid) accumulation in dominant species is crucial for exploring the driving mechanisms behind plant community succession and predicting the ecological restoration potential of these plants. In this study, we investigated four dominant herbaceous species (Artemisia argyi, Miscanthus sinensis, Ficus tikoua, and Ageratina Adenophora) growing on antimony (Sb) mining sites (MS) with high Sb and arsenic (As) levels, as well as non-mining sites (NMS). The aim was to analyze the variations in functional traits and their contribution to Sb and As concentrations in plants. Our results indicate that mining activities enhanced soil nitrogen (N) limitation, phosphorus (P) enrichment, while significantly reducing the plant height of three species, except for F. tikoua. The four species absorbed more calcium (Ca) to ensure higher tolerance to Sb and As levels, which is related to the activation of Ca signaling pathways and defense mechanisms. Furthermore, plant Sb and As concentrations were dependent on soil metal(loid) levels and plant element stoichiometry. Overall, these findings highlight the regulatory role of plant element traits in metal(loid) concentrations, warranting widespread attention and further study in the future.
 ### R code
 ```
 ############################  Plant functional traits   ###################################
