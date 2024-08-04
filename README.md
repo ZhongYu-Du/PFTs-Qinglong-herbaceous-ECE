@@ -7,10 +7,15 @@ Understanding how plant functional traits respond to mining activities and impac
 
 ## Description of the data and file structure
 Soil-all: The soil dataset of this study. Site and black are the sampling sites (SK and SFK) and area (mining site and no-mining site). SWC, soil water content (%); pH, soil pH; TN, total nitrogen content (g kg-1); TP, total phosphorus content (g kg-1); TK, total potassium content (g kg-1); AN, available nitrogen content (mg kg-1); AP, available phosphorus content (mg kg-1); AK, available potassium content (mg kg-1); TCa, available potassium content (mg kg-1); TSb, total antimony content (mg kg-1); TAs, total arsenic content (mg kg-1); ASb, available antimony content (mg kg-1); AAs, available arsenic content (mg kg-1); ECa, exchangeable calcium content (mg kg-1). CN, C:N ratio; CP, C:P ratio; CCa, C:Ca ratio; NP, N:P ratio; NCa, N:Ca ratio; PCa, P:Ca ratio.
+
 plant-trait: Site and black are the sampling sites (SK and SFK) and area (mining site and no-mining site). Species: AC is Artemisia argyi; M is Miscanthus sinensis; PHC is Ageratina Adenophora; DG is Ficus tikoua. Height is plant natural height (cm); SLA is plant leaf specific leaf area (mm2 mg-1); LT is plant leaf thickness (mm); LA is plant leaf area (cm2).
+
 plant-1-3: The same as plant trait dataset.
+
 LnRR-plant-ele-fig-lm: The plant organs (aboveground and underground parts) metals (Sb and As) content, nutrient elements and element ratios.
+
 SEM-all-species-data: All data of the soil and species.
+
 plant-all-ele: The same as LnRR-plant-ele-fig-lm dataset.
 ### R code
 ```
