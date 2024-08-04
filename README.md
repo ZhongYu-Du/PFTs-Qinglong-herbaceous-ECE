@@ -75,8 +75,6 @@ library(raster)
 setwd("F:\\Thesis_data\\Method_map")
 site <- read.csv("site_plot.csv")
 
-
-#Read data(边界数据)
 china_pro <- sf::st_read("中华人民共和国.json")
 qinglong = sf::st_read("晴隆县.json")
 
@@ -97,7 +95,7 @@ China_overall
 
 
 ####DEM
-xfun::dir_create("F:\\博士研究生\\Thesis_data\\Method_map")
+xfun::dir_create("F:Thesis_data\\Method_map")
 
 chn_map <- raster::getData(name = "alt", res = 2.5, country = "CHN", mask = TRUE, path = "F:\\博士研究生\\Thesis_data\\Method_map")
 plot(chn_map)
