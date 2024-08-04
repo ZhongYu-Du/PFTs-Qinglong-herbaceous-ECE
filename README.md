@@ -59,10 +59,6 @@ rm(list=ls())
   library(glmm.hp)
 }
 
-# data
-setwd("F:\\博士研究生\\2021贵州晴隆\\C优势草本功能性状\\R语言计算")
-
-
 ############################  Figure 1 map   ###################################
 
 #Laoding packages
@@ -76,7 +72,7 @@ library(terra)
 library(raster)
 
 
-setwd("F:\\博士研究生\\Thesis_data\\Method_map")
+setwd("F:\\Thesis_data\\Method_map")
 site <- read.csv("site_plot.csv")
 
 
