@@ -193,22 +193,6 @@ lmer_ress$sig <- ifelse(lmer_ress$`Pr(>|t|)` > 0.05, "", "SIG")
 lmer_ress
 
 
-###  GLMMERs
-glmmer_res = NULL
-n = names(data_soil)[-c(1:3)]
-
-
-for(i in seq_along(n)){
-  model <- glmmTMB(formula(paste0(n[i], "~ site + (1|block)")), data = data_soil, family = poisson)
-  result <- summary(model)$coefficients$cond[2, c("Estimate", "Std. Error", "z value", "Pr(>|z|)")]
-  glmmer_res[[i]] = result
-}
-names(glmmer_res) = n
-glmmer_ress <- as.data.frame(t(sapply(glmmer_res, "[", i = 1:max(sapply(glmmer_res, length)))))
-glmmer_ress$name <- rownames(glmmer_res)
-glmmer_ress$sig <- ifelse(glmmer_ress$`Pr(>|z|)` > 0.05, "", "SIG")
-glmmer_ress
-
 
 
 ###  TP/TK/AP/AK/TCa/PCa/TSb/TAs/ASb/AAs not normality (log or sqrt)
@@ -255,57 +239,7 @@ Anova(lmms_AAs)
 summary(lmms_AAs)
 
 
-##### GLMMs
 
-# TSb
-norm_TSb <- lm(TSb ~ site, data = data_soil)
-shapiro.test(norm_TSb$residuals)
-
-TSb_glm <- glmer(TSb ~ site + (1|block), family=poisson, data = data_soil)
-TSb_glm <- glmmTMB(TSb ~ site + (1|block), family=poisson, data = data_soil)
-Anova(TSb_glm)
-r.squaredGLMM(TSb_glm)
-rsq(TSb_glm)
-summary(TSb_glm)
-
-# ASb
-norm_ASb <- lm(log(ASb) ~ site, data = data_soil)
-shapiro.test(norm_ASb$residuals)
-
-ASb_glm <- glmmTMB(ASb ~ site + (1|block), family=poisson, data = data_soil)
-Anova(ASb_glm)
-rsq(ASb_glm)
-summary(ASb_glm)
-
-# PCa
-norm_PCa <- lm(log(PCa) ~ site, data = data_soil)
-shapiro.test(norm_PCa$residuals)
-
-PCa_glm <- glmmTMB(PCa ~ site + (1|block), family=poisson, data = data_soil)
-Anova(PCa_glm)
-rsq(PCa_glm)
-summary(PCa_glm)
-
-# AK
-norm_AK <- lm(log(AK+1) ~ site, data = data_soil)
-shapiro.test(norm_AK$residuals)
-
-AK_glm <- glmer(AK ~ site + (1|block), family=poisson, data = data_soil)
-AK_glm <- glmmTMB(AK ~ site + (1|block), family=poisson, data = data_soil)
-Anova(AK_glm)
-rsq(AK_glm)
-summary(AK_glm)
-
-# AP
-norm_AP <- lm(log10(AP) ~ site, data = data_soil)
-shapiro.test(norm_AP$residuals)
-
-
-AP_glm <- glmmTMB(AP ~ site + (1|block), family=poisson, data = data_soil)
-AP_glm <- glmer(AP ~ site + (1|block), family=poisson, data = data_soil)
-Anova(AP_glm)
-rsq(AP_glm)
-summary(AP_glm)
 
 
 #############################  Plant functional traits  ############################
